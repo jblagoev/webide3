@@ -1,0 +1,19 @@
+ID: DEMO77
+_schema-version: '2.0'
+version: 0.0.1
+
+modules:
+ - name: DB77
+   type: hdb
+   path: DB77
+   requires:
+    - name: hdi_DB77
+
+resources:
+ - name: hdi_DB77
+   parameters:
+      config:
+         schema: SCHEMADB77
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container
